@@ -173,7 +173,6 @@ new_design = np.hstack((np.ones((new_scaled.shape[0], 1)), new_scaled))
 
 scaled_pred = new_design.dot(theta)
 
-# Inverse transform to original units
 pred_original = y_scaler.inverse_transform(scaled_pred)
 
 print(f"\nPredicted Profit for the new startup: ₹{pred_original[0][0]:,.2f}")
